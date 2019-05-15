@@ -11,6 +11,8 @@
 * Routes:
     * / => main dashboard with component list
     * /projectX => projectX (lazy-loaded)
+* Maybe have basic projects build up to large projects
+* Landing Page w/ animation
 
 ## TODOS:
 
@@ -35,3 +37,10 @@
         * ![#8158FC](https://placehold.it/15/8158FC/000000?text=+) `#8158FC`
         * ![#212121](https://placehold.it/15/212121/000000?text=+) `#212121`
 * Everything must be Prettier'd
+* Everything must look good on mobile
+
+## Individual Module Ideas
+
+* Maybe a TODO to start?
+* Something aiming to teach rxjs
+* Something utilizing drag n drop cdk

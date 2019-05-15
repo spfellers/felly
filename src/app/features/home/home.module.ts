@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
+import { ProjectListComponent } from './components/project-list/project-list.component';
+import { ProjectTileComponent } from './components/project-tile/project-tile.component';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [ProjectListComponent, ProjectTileComponent],
   imports: [
     CommonModule,
     HomeRoutingModule
