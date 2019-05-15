@@ -34,3 +34,4 @@
         * ![#E1ADFB](https://placehold.it/15/E1ADFB/000000?text=+) `#E1ADFB`
         * ![#8158FC](https://placehold.it/15/8158FC/000000?text=+) `#8158FC`
         * ![#212121](https://placehold.it/15/212121/000000?text=+) `#212121`
+* Everything must be Prettier'd
