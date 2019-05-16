@@ -46,3 +46,4 @@
 * Something utilizing drag n drop cdk
 * Calendar to put goals? every week I want to do X, every 3 months I want to do Y, etc.
 * An app that lets lazy consumers publish that they are in the market for X, Sellers compete.
+* Ranker like one on youtube
