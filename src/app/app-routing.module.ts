@@ -5,6 +5,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: './features/home/home.module#HomeModule'
+  },
+  {
+    path: 'todo',
+    loadChildren: './features/todo/todo.module#TodoModule'
   }
 ];
 

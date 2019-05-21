@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'fel-project-tile',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project-tile.component.css']
 })
 export class ProjectTileComponent implements OnInit {
-
+  @Input() name: string;
+  @Input() description: string;
+  @Input() link: string;
+  
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

@@ -1,0 +1,13 @@
+.TodoList-Container {
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+
+.TodoList-Header {
+    font-size: 5rem;
+    font-weight: 600;
+}
