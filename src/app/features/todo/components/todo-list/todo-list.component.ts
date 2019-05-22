@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'fel-todo-list',
@@ -23,6 +24,10 @@ export class TodoListComponent implements OnInit {
     console.log('Adding new todo item:', this.todoForm.get('todoItem').value);
     this.todoList.push(this.todoForm.get('todoItem').value);
     this.todoForm.reset();
+  }
+
+  public drop(e: CdkDragDrop<string[]>): void {
+    moveItemInArray(this.todoList, e.previousIndex, e.currentIndex);
   }
 
 }

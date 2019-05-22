@@ -9,8 +9,13 @@
           <input class="TodoList-Input" type="text" formControlName="todoItem">
         </label>
       </form>
-      <div class="TodoList-Body">
-          <p *ngFor="let todo of todoList"> {{ todo }}</p>
+      <div class="TodoList-Body" [cdkDropListData]="todoList" cdkDropList (cdkDropListDropped)="drop($event)">
+        <div cdkDrag cdkDragBoundary=".TodoList-Body" class="TodoList-Item" *ngFor="let todo of todoList">
+          <div class="TodoList-Drag-Placeholder" *cdkDragPlaceholder>
+              <p>{{ todo }}</p>
+          </div>
+          <p>{{ todo }}</p>
+        </div>
       </div>
   </div>
 </div>

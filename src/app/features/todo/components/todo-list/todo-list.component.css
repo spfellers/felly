@@ -31,10 +31,17 @@
     width: 50%;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    overflow: hidden;
 }
 
-.TodoList-Body p {
+.TodoList-Item, .TodoList-Drag-Placeholder {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.TodoList-Item p {
     margin: 6px;
 }
 
@@ -44,4 +51,33 @@
     width: 50%;
     justify-content: center;
     padding: 10px;
+}
+
+.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+                0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+  
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.TodoList-Body.cdk-drop-list-dragging .TodoList-Item:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.TodoList-Item.cdk-drag-preview p {
+    font-size: 0px;
+}
+
+.TodoList-Drag-Placeholder {
+    background: #212144;
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.TodoList-Drag-Placeholder p {
+    margin: 6px;
 }
