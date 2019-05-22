@@ -2,13 +2,15 @@
   <div class="TodoList-Header">
     <p>Simple Todo List</p>
   </div>
-  <div class="TodoList-Body">
-    <span *ngFor="let todo of todoList"> {{ todo }}</span>
+  <div class="TodoList-Wrapper">
+    <form class="TodoList-Form" [formGroup]="todoForm" (ngSubmit)="onAddTodo()">
+        <label>
+          New Todo:
+          <input class="TodoList-Input" type="text" formControlName="todoItem">
+        </label>
+      </form>
+      <div class="TodoList-Body">
+          <p *ngFor="let todo of todoList"> {{ todo }}</p>
+      </div>
   </div>
-  <form [formGroup]="todoForm" (ngSubmit)="onAddTodo()">
-      <label>
-        New Todo:
-        <input type="text" formControlName="todoItem">
-      </label>
-    </form>
 </div>

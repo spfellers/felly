@@ -6,8 +6,42 @@
     flex-flow: column;
 }
 
-
 .TodoList-Header {
     font-size: 5rem;
     font-weight: 600;
+}
+
+.TodoList-Wrapper {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.TodoList-Input {
+    margin: 0 .25rem;
+    min-width: 125px;
+    border-radius: 5px;
+    transition: .5s ease-out;
+}
+
+.TodoList-Body {
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.TodoList-Body p {
+    margin: 6px;
+}
+
+.TodoList-Form {
+    display: flex;
+    flex: auto;
+    width: 50%;
+    justify-content: center;
+    padding: 10px;
 }
