@@ -1,5 +1,4 @@
 .TodoList-Container {
-    border: 1px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,17 +31,15 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    border: solid 1px #ccc;
 }
 
 .TodoList-Item, .TodoList-Drag-Placeholder {
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-bottom: 10px;
-}
-
-.TodoList-Item p {
-    margin: 6px;
+    min-height: 50px;
+    justify-content: space-around;
 }
 
 .TodoList-Form {
@@ -69,15 +66,17 @@
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-.TodoList-Item.cdk-drag-preview p {
-    font-size: 0px;
-}
-
 .TodoList-Drag-Placeholder {
     background: #212144;
+    border: solid 1px black;
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-.TodoList-Drag-Placeholder p {
-    margin: 6px;
+.trash-logo {
+    display: block;
+    width: 15px;
+    height: 3em;
+    background: url(/assets/trash.svg) no-repeat center right;
+    background-size: contain;
+    fill: lightblue;
 }

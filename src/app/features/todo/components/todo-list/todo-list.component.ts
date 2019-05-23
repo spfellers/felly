@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
+export type TodoListItem = { id: number, name: string };
+
 @Component({
   selector: 'fel-todo-list',
   templateUrl: './todo-list.component.html',
@@ -9,7 +11,8 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 })
 export class TodoListComponent implements OnInit {
   public todoForm: FormGroup;
-  public todoList: String[];
+  public todoList: TodoListItem[];
+  private todoListIndex = 0;
 
   constructor() {
     this.todoList = [];
@@ -22,12 +25,17 @@ export class TodoListComponent implements OnInit {
 
   public onAddTodo(): void {
     console.log('Adding new todo item:', this.todoForm.get('todoItem').value);
-    this.todoList.push(this.todoForm.get('todoItem').value);
+    this.todoList.push({id: this.todoListIndex++, name: this.todoForm.get('todoItem').value});
     this.todoForm.reset();
   }
 
   public drop(e: CdkDragDrop<string[]>): void {
     moveItemInArray(this.todoList, e.previousIndex, e.currentIndex);
+  }
+
+  public onDelete(tdi: TodoListItem): void {
+    console.log(tdi);
+    this.todoList = this.todoList.filter(item => item.id !== tdi.id);
   }
 
 }

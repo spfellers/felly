@@ -11,10 +11,9 @@
       </form>
       <div class="TodoList-Body" [cdkDropListData]="todoList" cdkDropList (cdkDropListDropped)="drop($event)">
         <div cdkDrag cdkDragBoundary=".TodoList-Body" class="TodoList-Item" *ngFor="let todo of todoList">
-          <div class="TodoList-Drag-Placeholder" *cdkDragPlaceholder>
-              <p>{{ todo }}</p>
-          </div>
-          <p>{{ todo }}</p>
+          <div class="TodoList-Drag-Placeholder" *cdkDragPlaceholder></div>
+          <p>{{ todo.name }}</p>
+          <a (click)="onDelete(todo)" class="trash-logo"></a>
         </div>
       </div>
   </div>
