@@ -24,6 +24,9 @@ export class TodoListComponent implements OnInit {
   public ngOnInit(): void { }
 
   public onAddTodo(): void {
+    if(!this.todoForm.get('todoItem').value.trim()) {
+      return;
+    }
     console.log('Adding new todo item:', this.todoForm.get('todoItem').value);
     this.todoList.push({id: this.todoListIndex++, name: this.todoForm.get('todoItem').value});
     this.todoForm.reset();
@@ -34,7 +37,6 @@ export class TodoListComponent implements OnInit {
   }
 
   public onDelete(tdi: TodoListItem): void {
-    console.log(tdi);
     this.todoList = this.todoList.filter(item => item.id !== tdi.id);
   }
 
