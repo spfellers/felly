@@ -9,3 +9,17 @@ span, p, h1, h2, h3, h4, h5, a, label, button {
     color: #E1ADFB;
     font-family: 'Signika', sans-serif;
 }
+
+h1 {
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.home-logo {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(/assets/home.svg) no-repeat center right;
+    background-size: contain;
+    cursor: pointer;
+}

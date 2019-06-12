@@ -1,0 +1,26 @@
+<div class="header">
+    <a routerLink="../" class="home-logo"></a>
+</div>
+<div class="TierList-Container">
+    <h1>Tier List</h1>
+<div class="TierList-Grid">
+  <div class="TierList-Rank" [id]="rank" *ngFor="let rank of ranks">
+    {{ rank }}
+  </div>
+  <div class="TierList-Group" cdkDropListGroup>
+    <div cdkDropList
+    class="TierList-List"
+    *ngFor="let rank of ranks"
+    cdkDropListOrientation="horizontal"
+    [cdkDropListData]="tierList[rank]"
+    (cdkDropListDropped)="drop($event)">
+    </div>
+  </div>
+  <div class="TierList-Pergatory">
+    <!-- TODO: make this loop through item of selectedCategory -->
+    <div class="TierList-PergatoryItem" cdkDrag *ngFor="let item of countries">
+      <img [src]="getImage(item)" [alt]="item">
+    </div>
+  </div>
+</div>
+</div>

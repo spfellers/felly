@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'todo',
     loadChildren: './features/todo/todo.module#TodoModule'
+  },
+  {
+    path: 'tierlist',
+    loadChildren: './features/tier-list/tier-list.module#TierListModule'
   }
 ];
 

@@ -4,25 +4,11 @@
     padding: 4px;
 }
 
-.home-logo {
-    display: block;
-    width: 32px;
-    height: 32px;
-    background: url(/assets/home.svg) no-repeat center right;
-    background-size: contain;
-    cursor: pointer;
-}
-
 .TodoList-Container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
-}
-
-.TodoList-Header {
-    font-size: 5rem;
-    font-weight: 600;
 }
 
 .TodoList-Wrapper {
