@@ -11,9 +11,7 @@
     <div cdkDropList
     class="TierList-List"
     *ngFor="let rank of ranks"
-    cdkDropListOrientation="horizontal"
-    [cdkDropListData]="tierList[rank]"
-    (cdkDropListDropped)="drop($event)">
+    cdkDropListOrientation="horizontal">
     </div>
   </div>
   <div class="TierList-Pergatory">
