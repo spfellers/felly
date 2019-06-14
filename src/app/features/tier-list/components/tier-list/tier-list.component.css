@@ -5,7 +5,7 @@
 }
 
 .header-text {
-    font-size: 5rem;
+    font-size: 5em;
     font-weight: 600;
     color: #E1ADFB;
     font-family: 'Signika', sans-serif;
@@ -56,33 +56,38 @@
 .TierList-PergatoryItem {
     height: 5em;
     width: 5em;
+    padding: 12px
 }
 
 .TierList-List {
+    /* background-color: #60b5cc; */
     border: 1px solid white;
+    /* max-height: 132px; */
+    display: flex;
+    justify-content: flex-start;
 }
 
 /* rank square background colors */
-#S {
+#S-box {
     background: #60b5cc;
 }
 
-#A {
+#A-box {
     background: #6bb76d;
 }
 
-#B {
+#B-box {
     background: #f0ad00;
 }
 
-#C {
+#C-box {
     background: #e88651;
 }
 
-#D {
+#D-box {
     background: #e66c7d;
 }
 
-#F {
+#F-box {
     background: #e31929;
 }
