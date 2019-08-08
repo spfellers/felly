@@ -7,23 +7,7 @@
   <div class="TierList-Rank" id="{{rank}}-box" *ngFor="let rank of ranks">
     {{ rank }}
   </div>
-  <ng-container #locked>
-      <div class="TierList-Group" id="testthis" cdkDropListGroup>
-        <div cdkDropList id="{{rank}}" class="TierList-List" *ngFor="let rank of ranks" 
-        cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)" [cdkDropListData]="tierLists[rank]">
-          <div class="TierList-PergatoryItem" cdkDrag *ngFor="let item of tierLists[rank]">
-              <img [src]="getImage(item)" [alt]="item">
-          </div>
-        </div>
-      </div>
-      <div class="TierList-Pergatory" id="pergatory" [cdkDropListConnectedTo]="ranks" cdkDropList>
-        <!-- TODO: make this loop through item of selectedCategory -->
-        <div class="TierList-PergatoryItem" cdkDrag *ngFor="let item of countries">
-          <img [src]="getImage(item)" [alt]="item">
-        </div>
-      </div>
-    </ng-container>
-  <!-- <ng-container #free *ngIf="free">
+  <ng-container #free>
     <div class="TierList-Group" cdkDropListGroup>
       <div cdkDropList
       class="TierList-List"
@@ -33,10 +17,10 @@
     </div>
     <div class="TierList-Pergatory">
       <!-- TODO: make this loop through item of selectedCategory -->
-      <!-- <div class="TierList-PergatoryItem" cdkDrag *ngFor="let item of countries">
+      <div class="TierList-PergatoryItem" cdkDrag *ngFor="let item of countries">
         <img [src]="getImage(item)" [alt]="item">
       </div>
-    </div> -->
-  <!-- </ng-container> -->
+    </div>
+  </ng-container>
 </div>
 </div>
