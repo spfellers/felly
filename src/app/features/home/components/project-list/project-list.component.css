@@ -1,12 +1,11 @@
 .ProjectList-Container {
-    border: 1px solid white;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
+    flex-flow: row wrap;
+    justify-content: center; 
 }
 
 .ProjectList-Header {
     font-size: 5rem;
     font-weight: 600;
+    text-align: center;
 }
