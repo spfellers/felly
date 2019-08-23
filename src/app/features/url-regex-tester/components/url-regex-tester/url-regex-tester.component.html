@@ -1,0 +1,10 @@
+<div class="header">
+  <a routerLink="../" class="home-logo"></a>
+</div>
+<div class="UrlRegexTester-Container">
+  <h1>Url /regex/ test</h1>
+  <form class="UrlRegexTester-Form" [formGroup]="urlForm" (ngSubmit)="onCheck()">
+    <input class="UrlRegexTester-Input" type="text" formControlName="url">
+    <button type="submit" class="UrlRegexTester-Button">Check</button>
+  </form>
+</div>

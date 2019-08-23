@@ -1,0 +1,37 @@
+.header {
+    height: 48px;
+    padding: 4px;
+}
+
+.UrlRegexTester-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.UrlRegexTester-Form {
+    align-items: center;
+    padding: 10px;
+    height: 100px;
+    width: 80%;
+}
+
+.UrlRegexTester-Input {
+    margin: 0 .25rem;
+    min-width: 125px;
+    width: 80%;
+    border-radius: 5px;
+    transition: .5s ease-out;
+    margin-right: 8px;
+}
+
+.UrlRegexTester-Button {
+    display: inline-block;
+    background: none;
+    border: 1px solid white;
+    padding: 1em 2em;
+    margin: 0;
+    cursor: pointer;
+    text-align: center;
+}

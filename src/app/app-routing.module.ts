@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'tierlist',
     loadChildren: './features/tier-list/tier-list.module#TierListModule'
+  },
+  {
+    path: 'urltester',
+    loadChildren: './features/url-regex-tester/url-regex-tester.module#UrlRegexTesterModule'
   }
 ];
 
