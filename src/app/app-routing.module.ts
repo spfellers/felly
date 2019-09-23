@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: './features/home/home.module#HomeModule'
+    loadChildren: './features/home/home.module#HomeModule',
+    data: {animation: 'HomePage'}
   },
   {
     path: 'todo',
-    loadChildren: './features/todo/todo.module#TodoModule'
+    loadChildren: './features/todo/todo.module#TodoModule',
+    data: {animation: 'TodoPage'}
   },
   {
     path: 'tierlist',
