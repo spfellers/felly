@@ -12,6 +12,7 @@
 }
 
 .ProjectTile-Title {
+    text-align: center;
     font-size: 2em;
     margin-bottom: .3em;
 }

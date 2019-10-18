@@ -1,5 +1,6 @@
 import { Component, OnInit, ContentChildren, QueryList, forwardRef } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'fel-tier-list',
@@ -12,9 +13,16 @@ export class TierListComponent implements OnInit {
 
   public countries = [ 'australia', 'canada', 'china', 'france', 'germany', 'india', 'italy', 'south-korea', 'united-kingdom', 'united-states' ];
   
-  constructor() { }
-  
-  ngOnInit() { }
+  constructor(private router: Router) { }
+
+  public ngOnInit() {
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0);
+    });
+   }
 
   public getImage(item: any) {
     return `assets/${this.category}/${item}.svg`

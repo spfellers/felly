@@ -5,13 +5,14 @@ body {
     height: 100vh;
 }
 
-span, p, h1, h2, h3, h4, h5, a, label, button {
+span, p, h1, h2, h3, h4, h5, a, label, button, ul {
     color: #E1ADFB;
-    font-family: 'Signika', sans-serif;
+    line-height: 1.75;
+    font-family: operator mono ssm a,operator mono ssm b,operator mono,source code pro,Menlo,Consolas,Monaco,monospace;
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 600;
 }
 

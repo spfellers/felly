@@ -3,8 +3,46 @@
 </div>
 <div class="UrlRegexTester-Container">
   <h1>Url /regex/ test</h1>
-  <form class="UrlRegexTester-Form" [formGroup]="urlForm" (ngSubmit)="onCheck()">
-    <input class="UrlRegexTester-Input" type="text" formControlName="url">
+  <form class="UrlRegexTester-Form" [formGroup]="rgxForm" (ngSubmit)="onCheck()">
+    <input class="UrlRegexTester-Input" type="text" formControlName="rgx">
     <button type="submit" class="UrlRegexTester-Button">Check</button>
   </form>
+</div>
+<div class="UrlRegexTester-ResultsContainer">
+  <div class="UrlRegexTester-ResultsContainer-good">
+      <h4 *ngIf="validMatches.length">
+          Correctly Matches valid urls:
+      </h4>
+      <ul>
+          <li *ngFor="let url of validMatches">
+            {{ url }}
+          </li>
+      </ul>
+      <h4 *ngIf="invalidMatches.length">
+        Correctly does not match invalid urls:
+      </h4>
+      <ul>
+          <li *ngFor="let url of invalidMatches">
+            {{ url }}
+          </li>
+      </ul>
+  </div>
+  <div class="UrlRegexTester-ResultsContainer-bad">
+      <h4 *ngIf="falseNegatives.length">
+          Incorrectly does not match valid urls:
+      </h4>
+      <ul>
+        <li *ngFor="let url of falseNegatives">
+          {{ url }}
+        </li>
+      </ul>
+      <h4 *ngIf="falsePositives.length">
+          Incorrectly matches invalid urls:
+      </h4>
+      <ul>
+          <li *ngFor="let url of falsePositives">
+            {{ url }}
+          </li>
+      </ul>
+  </div>
 </div>

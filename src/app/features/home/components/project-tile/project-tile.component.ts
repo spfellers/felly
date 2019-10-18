@@ -12,6 +12,6 @@ export class ProjectTileComponent implements OnInit {
   
   constructor() { }
 
-  ngOnInit() { }
+  public ngOnInit() { }
 
 }
