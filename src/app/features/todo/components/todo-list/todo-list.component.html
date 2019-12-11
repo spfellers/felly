@@ -37,8 +37,12 @@
                 ></div>
                 <p>{{ todo.name }}</p>
                 <div class="modify-todo">
-                    <a (click)="onEdit(todo)" class="pencil-logo"></a>
-                    <a (click)="onDelete(todo)" class="trash-logo"></a>
+                    <div class="left">
+                        <a (click)="onEdit(todo)" class="pencil-logo"></a>
+                    </div>
+                    <div class="right">
+                        <a (click)="onDelete(todo)" class="trash-logo"></a>
+                    </div>
                 </div>
             </div>
         </div>
