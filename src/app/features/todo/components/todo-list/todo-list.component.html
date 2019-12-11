@@ -2,21 +2,45 @@
     <a routerLink="../" class="home-logo"></a>
 </div>
 <div class="TodoList-Container">
-  <h1>Simple Todo List</h1>
-  <div class="TodoList-Wrapper">
-    <form class="TodoList-Form" [formGroup]="todoForm" (ngSubmit)="onAddTodo()">
-      <label class="TodoList-Label">
-        New Todo:
-        <input class="TodoList-Input" type="text" formControlName="todoItem">
-      </label>
-      <button type="submit" class="TodoList-Button">Add Item</button>
-    </form>
-    <div class="TodoList-Body" [cdkDropListData]="todoList" cdkDropList (cdkDropListDropped)="drop($event)">
-      <div cdkDrag cdkDragBoundary=".TodoList-Body" class="TodoList-Item" *ngFor="let todo of todoList">
-        <div class="TodoList-Drag-Placeholder" *cdkDragPlaceholder></div>
-        <p>{{ todo.name }}</p>
-        <a (click)="onDelete(todo)" class="trash-logo"></a>
-      </div>
+    <h1>Simple Todo List</h1>
+    <div class="TodoList-Wrapper">
+        <form
+            class="TodoList-Form"
+            [formGroup]="todoForm"
+            (ngSubmit)="onAddTodo()"
+        >
+            <label class="TodoList-Label">
+                New Todo:
+                <input
+                    class="TodoList-Input"
+                    type="text"
+                    formControlName="todoItem"
+                />
+            </label>
+            <button type="submit" class="TodoList-Button">Add Item</button>
+        </form>
+        <div
+            class="TodoList-Body"
+            [cdkDropListData]="todoList"
+            cdkDropList
+            (cdkDropListDropped)="drop($event)"
+        >
+            <div
+                cdkDrag
+                cdkDragBoundary=".TodoList-Body"
+                class="TodoList-Item"
+                *ngFor="let todo of todoList"
+            >
+                <div
+                    class="TodoList-Drag-Placeholder"
+                    *cdkDragPlaceholder
+                ></div>
+                <p>{{ todo.name }}</p>
+                <div class="modify-todo">
+                    <a (click)="onEdit(todo)" class="pencil-logo"></a>
+                    <a (click)="onDelete(todo)" class="trash-logo"></a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

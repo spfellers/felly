@@ -1,23 +1,36 @@
 :host {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
 
-    border: 2px solid #E1ADFB;
-    background: #212121;
-    height: 200px;
-    width: 250px;
-    margin: 3rem 3rem 3rem 3rem;
+  border: 2px solid #e1adfb;
+  background: #212121;
+  height: 200px;
+  width: 250px;
+  margin: 3rem 3rem 3rem 3rem;
+  transition: 0.3s;
+}
+
+:host:hover {
+  background: #272727;
 }
 
 .ProjectTile-Title {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: .3em;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0.3em;
 }
 
 .ProjectTile-SubTitle {
-    font-size: 1em;
-    text-align: center;
+  font-size: 1em;
+  text-align: center;
+}
+
+.ProjectTile-Link {
+  padding: 6px;
+}
+
+.ProjectTile-Link:hover {
+  background: #212121;
 }

@@ -9,3 +9,17 @@
     font-weight: 600;
     text-align: center;
 }
+
+.Sub-Header {
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.Section-Container {
+    background-color: #4e4e4e;
+}
+
+.About-Text {
+    text-align: center;
+}

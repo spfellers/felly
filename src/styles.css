@@ -5,10 +5,20 @@ body {
     height: 100vh;
 }
 
-span, p, h1, h2, h3, h4, h5, a, label, button, ul {
-    color: #E1ADFB;
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+label,
+button,
+ul {
+    color: #e1adfb;
     line-height: 1.75;
-    font-family: operator mono ssm a,operator mono ssm b,operator mono,source code pro,Menlo,Consolas,Monaco,monospace;
+    font-family: "Open Sans";
 }
 
 h1 {

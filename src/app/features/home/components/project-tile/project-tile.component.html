@@ -1,3 +1,6 @@
-<span class="ProjectTile-Title"> {{ name || 'default name'}} </span>
-<span class="ProjectTile-SubTitle"> {{ description || 'default description' }} </span>
-<a [href]="link" class="ProjectTile-SubTitle"> Link to source </a>
+<span class="ProjectTile-Title"> {{ name || "default name" }} </span>
+<span class="ProjectTile-SubTitle">
+  {{ description || "default description" }}
+</span>
+<a [routerLink]="route" class="ProjectTile-Link"> Live project </a>
+<a [href]="link" class="ProjectTile-Link"> Link to source </a>
