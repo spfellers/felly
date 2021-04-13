@@ -4,22 +4,22 @@ import { Routes, RouterModule } from "@angular/router";
 const routes: Routes = [
     {
         path: "",
-        loadChildren: "./features/home/home.module#HomeModule",
+        loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule),
         data: { animation: "HomePage" }
     },
     {
         path: "todo",
-        loadChildren: "./features/todo/todo.module#TodoModule",
+        loadChildren: () => import('./features/todo/todo.module').then(m => m.TodoModule),
         data: { animation: "TodoPage" }
     },
     {
         path: "tierlist",
-        loadChildren: "./features/tier-list/tier-list.module#TierListModule"
+        loadChildren: () => import('./features/tier-list/tier-list.module').then(m => m.TierListModule)
     },
     {
         path: "urltester",
         loadChildren:
-            "./features/url-regex-tester/url-regex-tester.module#UrlRegexTesterModule"
+            () => import('./features/url-regex-tester/url-regex-tester.module').then(m => m.UrlRegexTesterModule)
     }
 ];
 
